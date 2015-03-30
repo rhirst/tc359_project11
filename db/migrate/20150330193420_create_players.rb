@@ -2,11 +2,11 @@ class CreatePlayers < ActiveRecord::Migration
   def change
     create_table :players do |t|
       t.text :name
-      t.text :nationallity
+      t.text :country
       t.text :league
       t.text :club
       t.integer :number
-      t.text :position
+      t.date :birthday
 
       t.timestamps
     end
