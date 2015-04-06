@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :players
 
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :players
+  
+get '/sign-in' => 'sessions#new'
+delete '/sign-out' => 'sessions#destroy'
 root 'static#home'
 get '/about' => 'static#about'
 get '/cat-pictures(/:number_of_cats)' => 'static#cats', as: :cat_pictures
