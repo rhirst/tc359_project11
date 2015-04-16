@@ -29,6 +29,7 @@
   <strong>Birthday:</strong>
   <%= @player.birthday %>
 </p>
-
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_player_path(@player) %> |
+<% end %>
 <%= link_to 'Back', players_path %>

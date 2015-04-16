@@ -39,5 +39,8 @@ gem 'cat_api', '~>0.1.0'
 gem 'rails_12factor', group: :production
 group :development, :test do 
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 gem 'pg'
